@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-const Item = ({producto}) => {
+const Item = ({producto,id}) => {
     return (
         <div className="m-2">
             <div className="card" style={{width: "18rem", paddingBottom: "1rem"}}>
@@ -11,7 +11,7 @@ const Item = ({producto}) => {
         <h5 className="card-title">{producto.anio}</h5>
         <h6 className="card-title">{producto.color}</h6>
         <p className="card-text" style={{height:"5rem"}}>{producto.descripcion}</p>
-        <NavLink to='/item/:id' className="btn btn-primary m-2">Comprar Vehiculo u$s{producto.precio}</NavLink>
+        <NavLink to={`/item/:${id}`} className="btn btn-primary m-2">Comprar Vehiculo u$s{producto.precio}</NavLink>
     </div>
     </div>
         </div>
