@@ -3,6 +3,7 @@ import Navbar from "./Componentes/Navbar/Navbar"
 import ItemListContainer from "./Componentes/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer"
 import ContextoCarrito from "./Contexto/ContextoCarrito";
+import Layout from "./Layout/Layout"
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
     <ContextoCarrito>
+    <Layout/>
     <Router>
     <NavLink/>
     <Navbar/>
