@@ -7,7 +7,6 @@ const ItemDetailContainer = () => {
     const [producto, setproducto] = useState({})
     const promise = (id) =>{
         return new Promise((resolve) => {
-            console.log(id)
             setTimeout(() => {
                 resolve(Data.find(Item => Item.id === parseInt(id)));
             },500);
