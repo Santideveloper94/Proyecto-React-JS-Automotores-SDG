@@ -6,7 +6,8 @@
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzIciEOzOQkTKfDG2lmtfr3X1yQzAW68hqA&usqp=CAU",
     "descripcion": "Un clasico de Ford de gran exito en el mercado.",
     "anio": 2012,
-    "precio": 10000
+    "precio": 10000,
+    "categoria": "Usado"
     },
     {"id": 2,
     "marca": "Chevrolet",
@@ -15,7 +16,8 @@
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8VDUZTbxtkU3mARO1qz8k-R6SQEVBA0wfA&usqp=CAU",
     "descripcion": "La marca americana logró con este vehiculo un salto de calidad respecto a su antesesor.",
     "anio": 2018,
-    "precio": 16000
+    "precio": 16000,
+    "categoria": "Usado"
     },
     {"id": 3,
     "marca": "Fiat",
@@ -23,8 +25,9 @@
     "color": "Azul Metalico",
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVRpbfsFSCg8pTFQvQD1VsSvHUmeqp6Hm0MQ&usqp=CAU",
     "descripcion": "Tecnologia, confort y rendimiento en un solo auto, Fiat Cronos representa lo mejor de lo mejor en lo que a su seccion respecta.",
-    "anio": 2020,
-    "precio": 20000
+    "anio": 2022,
+    "precio": 20000,
+    "categoria": "Nuevo"
     },
     {"id": 4,
     "marca": "Hyundai",
@@ -33,7 +36,8 @@
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU2_hMvXkVNOw3X9omCFl_yiTHTr8lXZDiPA&usqp=CAU",
     "descripcion": "Velocidad y deportividad en un solo vehiculo. Una joyita que cualquier fanatico quisiera tener.",
     "anio": 2018,
-    "precio": 30000
+    "precio": 30000,
+    "categoria":"Usado"
     },
     {"id": 5,
     "marca": "Renault",
@@ -41,8 +45,9 @@
     "color": "Negro",
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkbsP0oUoHqBNdLiwUz1EZ1otUiLIVjKJJHw&usqp=CAU",
     "descripcion": "El mejor deportivo de Renault. Excelencia y precision son las caracteristicas que mejor describen a este modelo.",
-    "anio": 2020,
-    "precio": 14000
+    "anio": 2022,
+    "precio": 14000,
+    "categoria": "Nuevo"
     },
     {"id": 6,
     "marca": "Volkswagen",
@@ -50,7 +55,8 @@
     "color": "Gris Claro",
     "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiN8fxi1jFofNr5rHkBqfWrnrozN2nisPYQ&usqp=CAU",
     "descripcion": "El Volskwagen Golf es, a dia de hoy uno de los vehiculos mas requeridos y vendidos del mercado.",
-    "anio": 2020,
-    "precio": 18000
+    "anio": 2022,
+    "precio": 18000,
+    "categoria": "Nuevo"
     }
 ]
