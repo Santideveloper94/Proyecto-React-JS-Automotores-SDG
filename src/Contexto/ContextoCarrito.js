@@ -35,7 +35,7 @@ const ContextoCarrito = ({children}) => {
     }
 
     return (
-        <cartContext.Provider value={{value}}>
+        <cartContext.Provider value={value}>
             {children}
         </cartContext.Provider>
     )
