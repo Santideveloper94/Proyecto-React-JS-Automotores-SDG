@@ -8,14 +8,14 @@ export const CartProvider = () => useContext(cartContext);
 const ContextoCarrito = ({children}) => {
     const setMostrarAlerta  = ProveedorGlobal();
     const [cart, setcart] = useState([])
-    const agregarAlCarrito = (item,cantidad) => {
+    const agregarAlCarrito = (producto,cantidad) => {
         
-            if(verificarSiHayProductoEnCarrito(item,cantidad)){
-                setcart(unificarItems(item,cantidad));
+            if(verificarSiHayProductoEnCarrito(producto,cantidad)){
+                setcart(unificarItems(producto,cantidad));
                 setMostrarAlerta(true);
                 return;
             }else{
-                setcart(...cart,{...item,cantidad})
+                setcart(...cart,{...producto,cantidad})
                 setMostrarAlerta(true);
             }
         

@@ -1,11 +1,12 @@
 import React from 'react'
 import ItemCount from "../../Componentes/ItemCount/ItemCount"
+import { CartProvider } from  "../../Contexto/ContextoCarrito"
 const ItemDetail = ({producto}) => {
+    const { agregarAlCarrito } = CartProvider();
+            const vehiculosAvender = (cantidad) =>{
+        agregarAlCarrito(producto,cantidad)
 
-    const agregarAlCarrito = (cantidad) =>{
-        console.log(cantidad)
     }
-    agregarAlCarrito();
     return (
         <div>
             <img src={producto.imagen} alt={producto.modelo} width={300}/>
@@ -14,7 +15,7 @@ const ItemDetail = ({producto}) => {
             <p>{producto.anio}</p>
             <p>u$s{producto.precio}</p>
             <p>{producto.categoria}</p>
-            <ItemCount stock={producto.cantidad} onAdd={agregarAlCarrito}/><br />
+            <ItemCount stock={producto.cantidad} onAdd={vehiculosAvender}/><br />
         </div>
     )
 }
