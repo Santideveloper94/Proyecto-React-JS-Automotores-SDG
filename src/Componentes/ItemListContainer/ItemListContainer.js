@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import Data from '../Data/Data.json'
-import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router'
 
 const ItemListContainer = () => {
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
                 setproducto(producto)
             })
         }else{
-            getProducts.then((producto) => {
+            getProducts().then((producto) => {
                 setproducto(producto);
             })
         }
@@ -36,7 +36,7 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            <ItemDetail producto={producto}/>
+            <ItemList productos={producto}/>
         </div>
     )
 }
