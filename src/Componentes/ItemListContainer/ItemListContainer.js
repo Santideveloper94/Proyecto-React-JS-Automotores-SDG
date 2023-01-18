@@ -5,7 +5,7 @@ import {useParams} from 'react-router'
 
 const ItemListContainer = () => {
     const [producto, setproducto] = useState({})
-    const {Id} = useParams();
+    const {id} = useParams();
     const getProducts = () => {
         return new Promise ((res) => {
             setTimeout(() => {
@@ -22,8 +22,8 @@ const ItemListContainer = () => {
         });
     }
     useEffect(() => {
-        if(Id){
-            getProductsByCategory(Id).then((producto) => {
+        if(id){
+            getProductsByCategory(id).then((producto) => {
                 setproducto(producto)
             })
         }else{
@@ -31,11 +31,11 @@ const ItemListContainer = () => {
                 setproducto(producto);
             })
         }
-    },)
+    },[id])
     
     return (
         <div>
-            <ItemList productos={Data}/>
+            <ItemList productos={producto}/>
         </div>
     )
 }
