@@ -1,24 +1,12 @@
 import React, { createContext, useState,useContext } from 'react'
-import {verificarSiHayProductoEnCarrito,unificarItems} from '../Helpers/Helpers';
-import { ProveedorGlobal } from "./ContextoGlobal"
 
 export const cartContext = createContext();
 export const CartProvider = () => useContext(cartContext);
 
 const ContextoCarrito = ({children}) => {
-    const setMostrarAlerta  = ProveedorGlobal();
     const [cart, setcart] = useState([])
     const agregarAlCarrito = (producto,cantidad) => {
-        
-            if(verificarSiHayProductoEnCarrito(producto,cantidad)){
-                setcart(unificarItems(producto,cantidad));
-                setMostrarAlerta(true);
-                return;
-            }else{
-                setcart(...cart,{...producto,cantidad})
-                setMostrarAlerta(true);
-            }
-        
+        setcart({...producto,cantidad})
         }
     const removerTodoElCarrito = () => {
         setcart([])
