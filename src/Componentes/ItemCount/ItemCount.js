@@ -9,7 +9,7 @@ const ItemCount = ({stock,onAdd}) => {
         }
     }  
     const restar = () => {
-        if(contador >= 1 ){
+        if(contador > 1 ){
             setcontador(contador - 1)
         }
     }
@@ -18,9 +18,9 @@ const ItemCount = ({stock,onAdd}) => {
 
     return (
         <div>
+        <p>{contador}</p>
             <button onClick={sumar}>Sumar</button>
             <button onClick={restar}>Restar</button>
-            <p>{contador}</p>
             <button onClick={() => setcontador(1)}>Reset</button>
             <button onClick={() => onAdd(contador)}>Agregar Al Carrito</button>
         </div>
