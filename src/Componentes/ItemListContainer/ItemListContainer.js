@@ -4,7 +4,7 @@ import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router'
 
 const ItemListContainer = () => {
-    const [producto, setproducto] = useState({})
+    const [producto, setproducto] = useState([])
     const {id} = useParams();
     const getProducts = () => {
         return new Promise ((res) => {
