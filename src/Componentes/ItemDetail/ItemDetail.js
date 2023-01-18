@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ItemCount from "../../Componentes/ItemCount/ItemCount"
 const ItemDetail = ({producto}) => {
 
     const agregarAlCarrito = (cantidad) =>{
@@ -14,6 +14,7 @@ const ItemDetail = ({producto}) => {
             <p>{producto.anio}</p>
             <p>u$s{producto.precio}</p>
             <p>{producto.categoria}</p>
+            <ItemCount stock={producto.cantidad} onAdd={agregarAlCarrito}/><br />
         </div>
     )
 }
