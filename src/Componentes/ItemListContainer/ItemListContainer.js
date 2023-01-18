@@ -32,7 +32,6 @@ const ItemListContainer = () => {
             })
         }
     },[id])
-    
     return (
         <div>
             <ItemList productos={producto}/>
