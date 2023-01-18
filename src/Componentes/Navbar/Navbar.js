@@ -23,8 +23,8 @@ const Navbar = () => {
                 Categorias
             </NavLink>
             <ul className="dropdown-menu">
-                <li><NavLink className="dropdown-item" to='/category/nuevos'>Vehiculos Nuevos</NavLink></li>
-                <li><NavLink className="dropdown-item" to='/category/usados'>Vehiculos Usados</NavLink></li>
+                <li><NavLink className="dropdown-item" to='/category/Nuevo'>Nuevo</NavLink></li>
+                <li><NavLink className="dropdown-item" to='/category/Usado'>Usado</NavLink></li>
             </ul>
             </li>
         </ul>
