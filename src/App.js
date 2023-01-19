@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from "./Componentes/Navbar/Navbar"
+import Carousel from "./Componentes/Carousel/Carousel"
 import ItemListContainer from "./Componentes/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer"
 import ContextoCarrito from "./Contexto/ContextoCarrito";
@@ -19,7 +20,8 @@ function App() {
       <Route path='/' element={<ItemListContainer/>}></Route>
       <Route path='/category/:id' element={<ItemListContainer/>}></Route>
       <Route path={`/Item/:productoId`} element={<ItemDetailContainer/>}></Route>
-    </Routes>
+      <Route path={`/category/Nosotros`} element={<Carousel/>}></Route>
+    </Routes><br />
     </Router>
     </ContextoCarrito>
     </div>
