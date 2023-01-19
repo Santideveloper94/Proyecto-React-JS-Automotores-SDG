@@ -5,8 +5,9 @@ const ItemDetail = ({producto}) => {
     const { agregarAlCarrito } = CartProvider();
             const vehiculosAvender = (cantidad) =>{
         agregarAlCarrito(producto,cantidad)
-
     }
+    console.log(producto)
+    console.log(cantidad)
     return (
         <div>
             <img src={producto.imagen} alt={producto.modelo} width={300}/>
