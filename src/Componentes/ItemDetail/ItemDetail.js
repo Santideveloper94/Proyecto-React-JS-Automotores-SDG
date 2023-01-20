@@ -3,8 +3,8 @@ import ItemCount from "../../Componentes/ItemCount/ItemCount"
 import { CartProvider } from  "../../Contexto/ContextoCarrito"
 const ItemDetail = ({producto}) => {
     const { agregarAlCarrito } = CartProvider();
-            const vehiculosAvender = (cantidad) =>{
-        agregarAlCarrito(producto,cantidad)
+            const vehiculosAvender = (quantity) =>{
+        agregarAlCarrito(producto,quantity)
     }
     return (
         <div>
