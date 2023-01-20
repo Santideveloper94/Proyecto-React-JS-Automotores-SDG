@@ -34,13 +34,20 @@ const ContextoCarrito = ({children}) => {
         let nuevoCarrito = cart.filter((e) => e.id !== id);
         setCart(nuevoCarrito)
     }
-    console.log(cart)
+    const precioTotal = () => {
+        return cart.reduce((prev,act) => prev + act.quantity * act.price,0);
+    }
+    const totalProductos = () => {
+        return cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);
+    }
     const value = {
         cart,
         agregarAlCarrito,
         removerTodoElCarrito,
         borrarElemento,
-        isInCart
+        isInCart,
+        precioTotal,
+        totalProductos
     }
 
     return (
