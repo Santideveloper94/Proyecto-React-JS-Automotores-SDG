@@ -6,9 +6,9 @@ const CartWidget = () => {
     const {totalProductos} = CartProvider();
     return (
         <Link>
-            <div className="iconoCart">
+            <div>
                 <i className="bi bi-cart"></i>
-                {totalProductos()>0 && <span>totalProducts()</span>}
+                {totalProductos()>0 && <span>TotalProductos:</span>}
             </div>
         </Link>
     )
