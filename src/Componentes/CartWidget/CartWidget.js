@@ -6,7 +6,7 @@ const CartWidget = () => {
     const {totalProductos} = CartProvider();
     return (
         <Link>
-            <div>
+            <div className="iconoCart">
                 <i className="bi bi-cart"></i>
                 {totalProductos()>0 && <span>totalProducts()</span>}
             </div>
