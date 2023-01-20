@@ -8,7 +8,7 @@ const CartWidget = () => {
         <Link>
             <div>
                 <i className="bi bi-cart"></i>
-                {totalProductos()>0 && <span>TotalProductos:</span>}
+                <span>TotalProductos:</span>{totalProductos()>0 && totalProductos()}
             </div>
         </Link>
     )
