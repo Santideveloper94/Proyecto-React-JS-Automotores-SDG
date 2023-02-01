@@ -6,7 +6,7 @@ import ItemCart from '../ItemCart/ItemCart'
 import Formulario from '../Formulario/Formulario'
 
 const Cart = () => {
-    const{cart, totalCompra} = useContext(cartContext)
+    const{cart, precioTotal} = useContext(cartContext)
 
     
     if (cart.length === 0) {
@@ -34,7 +34,7 @@ const Cart = () => {
                     <h4 className='form__title'>Formulario de compra</h4>
                     <div className='cart__total'>
                         <p className='cart__total--p'>
-                            Total compra  <span>$ARS {totalCompra()}</span>
+                            Total compra  <span>$ARS {precioTotal()}</span>
                         </p>
                     </div>
                     <Formulario/>
