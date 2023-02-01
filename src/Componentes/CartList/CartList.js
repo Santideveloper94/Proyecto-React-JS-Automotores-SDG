@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { cartContext} from '../../Contexto/ContextoCarrito'
 import ItemCart from '../ItemCart/ItemCart'
-import Form from './Form'
+import Formulario from '../Formulario/Formulario'
 
 const Cart = (item) => {
     const{carrito, totalCompra} = useContext(cartContext)
@@ -37,7 +37,7 @@ const Cart = (item) => {
                             Total compra  <span>$ARS {totalCompra()}</span>
                         </p>
                     </div>
-                    <Form/>
+                    <Formulario/>
                 </section>
             </div>
         </>
