@@ -4,7 +4,7 @@ import { cartContext } from '../../Contexto/ContextoCarrito'
 
 const ItemCart = (item) => {
 
-	const {product:{item:{title, price, img, alt,id, offer }, quantity}} = item
+	const {producto:{item:{title, price, img, alt,id, offer }, quantity}} = item
     const {borrarProducto} = useContext(cartContext)
 
     return (

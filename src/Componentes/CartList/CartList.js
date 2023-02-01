@@ -6,10 +6,10 @@ import ItemCart from '../ItemCart/ItemCart'
 import Formulario from '../Formulario/Formulario'
 
 const Cart = (item) => {
-    const{carrito, totalCompra} = useContext(cartContext)
+    const{cart, totalCompra} = useContext(cartContext)
 
     
-    if (carrito.length === 0) {
+    if (cart.length === 0) {
         return(
             <>
             <div className='cart__empty empty'>
@@ -26,7 +26,7 @@ const Cart = (item) => {
                 <section className='cart__main'>
                         <h2 className='cart__h2'>Carrito de compras</h2>
                         <div className='cart__products'>
-                            {carrito.map((product) => <ItemCart  product={product} key={product.id}/>)}
+                            {cart.map((producto) => <ItemCart  producto={producto} key={producto.id}/>)}
                             {/* id={product.id} */}
                         </div>
                 </section>
