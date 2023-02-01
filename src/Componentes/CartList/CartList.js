@@ -27,7 +27,7 @@ const Cart = (item) => {
                         <h2 className='cart__h2'>Carrito de compras</h2>
                         <div className='cart__products'>
                             {cart.map((producto) => <ItemCart  producto={producto} key={producto.id}/>)}
-                            {/* id={product.id} */}
+                            {/* id={producto.id} */}
                         </div>
                 </section>
                 <section className='container__form'>
