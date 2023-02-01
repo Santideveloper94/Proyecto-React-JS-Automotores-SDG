@@ -5,7 +5,7 @@ import { cartContext} from '../../Contexto/ContextoCarrito'
 import ItemCart from '../ItemCart/ItemCart'
 import Formulario from '../Formulario/Formulario'
 
-const Cart = (item) => {
+const Cart = () => {
     const{cart, totalCompra} = useContext(cartContext)
 
     
