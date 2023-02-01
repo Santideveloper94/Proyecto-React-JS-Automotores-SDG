@@ -5,7 +5,7 @@ import {CartProvider} from "../../Contexto/ContextoCarrito"
 const CartWidget = () => {
     const {totalProductos} = CartProvider();
     return (
-        <Link>
+        <Link to={`/cart`}>
             <div>
                 <i className="bi bi-cart"></i>
                 <span>TotalProductos:</span>{totalProductos()>0 && totalProductos()}

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CarritoContext } from '../../Contexto/ContextoCarrito'
+import { cartContext } from '../../Contexto/ContextoCarrito'
 import useFirebase from '../../Hooks/UseFirebase'
 import Swal from 'sweetalert2'
 
@@ -11,7 +11,7 @@ const Formulario = ({total, compra}) => {
         // const [ error, setError ] = useState({})
 
     const { getTicket } = useFirebase()
-    const { limpiarCarrito, validarFormulario } = useContext(CarritoContext)
+    const { limpiarCarrito, validarFormulario } = useContext(cartContext)
     const [formData, setFormData] = useState({        
             nombre: '',
             apellido: '',
