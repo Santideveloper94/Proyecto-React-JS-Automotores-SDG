@@ -4,7 +4,7 @@ import { cartContext } from '../../Contexto/ContextoCarrito'
 
 const ItemCart = ({producto}) => {
 	console.log(producto)
-	const {marca, precio, imagen, alt,id, offer,quantity }= producto
+	const {marca, modelo, precio, imagen, alt,id, color, offer, anio, categoria, quantity }= producto
     const {borrarElemento} = useContext(cartContext)
 	const {removerTodoElCarrito} = useContext(cartContext)
 
@@ -18,9 +18,18 @@ const ItemCart = ({producto}) => {
 					<div className='card'>
 						<img src={imagen} className='card__image' alt={alt || 'Imagen del producto'}/>
 						<div className='cart__header'>
-							<h3 className='cart__marca'>
-								{marca}
+							<h3 className='cart__marca_modelo'>
+								{marca} {modelo}
 							</h3>
+							<h4 className='cart_color'>
+								{color}
+							</h4>
+							<h5 className='cart_anio'>
+								{anio}
+							</h5>
+							<h5>
+								{categoria}
+							</h5>
 							<div className='cart__footer'>
 								<div className='cart__footer--precio'>
 									{offer===true? <p className='text__offer--item'>u$s{Math.round(precio/1.10)} Unidad</p> : <p className='text__precio--item'>u$s{precio} unidad</p>}
