@@ -5,7 +5,8 @@ import { cartContext } from '../../Contexto/ContextoCarrito'
 const ItemCart = (item) => {
 
 	const {producto:{item:{marca, precio, imagen, alt,id, offer }, quantity}} = item
-    const {borrarProducto} = useContext(cartContext)
+    const {borrarElemento} = useContext(cartContext)
+	const {removerTodoElCarrito} = useContext(cartContext)
 
     return (
         <>
@@ -25,7 +26,8 @@ const ItemCart = (item) => {
 									{offer===true? <p className='text__offer--item'>ARS ${Math.round(precio/1.10)} Unidad</p> : <p className='text__precio--item'>ARS ${precio} unidad</p>}
 									{offer ===true? <p className='text__offer--quantity'>Total <span>ARS ${quantity * Math.round(precio/1.10)}</span></p>: <p className='text__offer--quantity'>Total <span>ARS ${quantity * precio}</span></p>}
 								</div>
-								<button className='btn__cart btn__cart--delete ' onClick={() => borrarProducto(id)}>Eliminar</button>
+								<button className='btn__cart btn__cart--delete ' onClick={() => borrarElemento(id)}>Eliminar</button>
+								<button className='btn__cart btn__cart--delete ' onClick={() => removerTodoElCarrito()}>Vaciar Carrito</button>
 							</div>
 						</div>	
 					</div>	
