@@ -15,7 +15,7 @@ const Formulario = ({total, compra}) => {
     const [formData, setFormData] = useState({        
             nombre: '',
             apellido: '',
-            mail: '',
+            email: '',
             telefono: '',
             mensaje: '',
         // total: total,
@@ -29,7 +29,7 @@ const Formulario = ({total, compra}) => {
         const onSubmit = (e) => {
             e.preventDefault();
             console.log("form", formData.nombre)
-            if (validarFormulario([formData.nombre, formData.apellido, formData.mail, formData.telefono, formData.mensaje])) {
+            if (validarFormulario([formData.nombre, formData.apellido, formData.email, formData.telefono, formData.mensaje])) {
                 Swal.fire({
                 title: "Oops!",
                 text: "Faltan campos por completar",
@@ -73,8 +73,8 @@ const Formulario = ({total, compra}) => {
                 className='form__text'
                 type="email"
                 name="email"
-                placeholder="Email"
-                value={formData.mail}
+                placeholder="email"
+                value={formData.email}
                 onChange={handleChange}
             />
             <input
@@ -93,9 +93,8 @@ const Formulario = ({total, compra}) => {
                 value={formData.mensaje}
                 onChange={handleChange}
             />
-            <button className='btn__cart' type="submit">Finalizar mi compra</button>
+            <button className='btn__cart' type="submit">Finalizar mi compra</button><br />
             <Link to="/" className="btn__volver">Volver a comprar</Link>
-            <button className='btn__volver' onClick={() => limpiarCarrito()}>Vaciar el carrito </button>
         </form>
     </>
     );
