@@ -34,7 +34,7 @@ const ContextoCarrito = ({children}) => {
         setCart(nuevoCarrito)
     }
     const precioTotal = () => {
-        return cart.reduce((prev,act) => prev + act.quantity * act.price,0);
+        return cart.reduce((prev,act) => prev + act.quantity * act.precio,0);
     }
     const totalProductos = () => {
         return cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);

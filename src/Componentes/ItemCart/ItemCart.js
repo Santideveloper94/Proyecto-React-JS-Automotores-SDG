@@ -23,7 +23,7 @@ const ItemCart = ({producto}) => {
 							</h3>
 							<div className='cart__footer'>
 								<div className='cart__footer--precio'>
-									{offer===true? <p className='text__offer--item'>u$s{Math.round(precio/1.10)} Unidad</p> : <p className='text__precio--item'>u$s{precio}</p>}
+									{offer===true? <p className='text__offer--item'>u$s{Math.round(precio/1.10)} Unidad</p> : <p className='text__precio--item'>u$s{precio} unidad</p>}
 									{offer ===true? <p className='text__offer--quantity'>Total <span>u$s{quantity * Math.round(precio/1.10)}</span></p>: <p className='text__offer--quantity'>Total <span>u$s{quantity * precio}</span></p>}
 								</div>
 								<button className='btn__cart btn__cart--delete ' onClick={() => borrarElemento(id)}>Eliminar</button>

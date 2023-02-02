@@ -11,7 +11,7 @@ const Formulario = ({total, compra}) => {
         // const [ error, setError ] = useState({})
 
     const { getTicket } = useFirebase()
-    const { limpiarCarrito, validarFormulario } = useContext(cartContext)
+    const { removerTodoElCarrito, validarFormulario } = useContext(cartContext)
     const [formData, setFormData] = useState({        
             nombre: '',
             apellido: '',
@@ -47,7 +47,7 @@ const Formulario = ({total, compra}) => {
                 icon: "success",
             });
             getTicket({ datos: formData });
-            limpiarCarrito();
+            removerTodoElCarrito();
         };
     
     return (
