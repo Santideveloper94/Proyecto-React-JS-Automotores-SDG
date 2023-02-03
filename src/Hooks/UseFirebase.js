@@ -43,13 +43,13 @@ const getProducts = async () => {
     }
 }
 
-const getProduct =  async (Id) => {
+const getProduct =  async (id) => {
 
     try {
         setLoading(true)
-        const document = doc(Db,"Vehiculos",Id)
+        const document = doc(Db,"Vehiculos",id)
         const response = await getDoc(document)
-        setProducto({Id:response.Id,...response.data()})
+        setProducto({id:response.id,...response.data()})
         setLoading(false)
     } catch (error) {
         console.log(error)
@@ -65,7 +65,7 @@ const getTicket = async({datos}) => {
             setTimeout(() => {
                 Swal.fire({
                     title: "Genial!",
-                    text: `Su orden es ${order.Id}`,
+                    text: `Su orden es ${order.id}`,
                     icon: "success",
                     timerProgressBar: true,
                 })
