@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
+import { cartContext } from '../../Contexto/ContextoCarrito'
 
 const ItemCount = ({stock,onAdd}) => {
     const [contador, setcontador] = useState(1)
@@ -12,7 +13,7 @@ const ItemCount = ({stock,onAdd}) => {
             setcontador(contador - 1)
         }
     }
-
+    const {removerTodoElCarrito} = useContext(cartContext)
 
     return (
         <div>
@@ -21,6 +22,7 @@ const ItemCount = ({stock,onAdd}) => {
             <button onClick={restar}>Restar</button>
             <button onClick={() => setcontador(1)}>Reset</button>
             <button onClick={() => onAdd(contador)}>Agregar Al Carrito</button>
+            <button onClick={removerTodoElCarrito}>Vaciar Carrito</button>
         </div>
     )
 }
