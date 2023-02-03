@@ -39,6 +39,9 @@ const ContextoCarrito = ({children}) => {
     const totalProductos = () => {
         return cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);
     }
+    const validarFormulario = (campos) => {
+        return campos.some((campo) => campo === "") 
+    }
     const value = {
         cart,
         agregarAlCarrito,
@@ -46,7 +49,8 @@ const ContextoCarrito = ({children}) => {
         borrarElemento,
         isInCart,
         precioTotal,
-        totalProductos
+        totalProductos,
+        validarFormulario
     }
 
     return (
