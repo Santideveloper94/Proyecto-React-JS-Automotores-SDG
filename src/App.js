@@ -5,6 +5,7 @@ import ItemListContainer from "./Componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "./Componentes/ItemDetailContainer/ItemDetailContainer"
 import ContextoCarrito from "./Contexto/ContextoCarrito";
 import CartList from "./Componentes/CartList/CartList";
+import Error from "./Componentes/Error/Error"
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 
 
@@ -23,6 +24,7 @@ function App() {
       <Route path={`/Item/:productoId`} element={<ItemDetailContainer/>}></Route>
       <Route path={`/category/Nosotros`} element={<Carousel/>}></Route>
       <Route path={`/cart`} element={<CartList/>}></Route>
+      <Route path={'*'} element={<Error/>}></Route>
     </Routes><br />
     </Router>
     </ContextoCarrito>
