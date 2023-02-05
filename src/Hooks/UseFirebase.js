@@ -39,7 +39,6 @@ const getProducts = async () => {
             }))
         })
     } catch (error) {
-        console.log(error)
     }
 }
 
@@ -52,7 +51,6 @@ const getProduct =  async (id) => {
         setProducto({id:response.id,...response.data()})
         setLoading(false)
     } catch (error) {
-        console.log(error)
     }
 
 };
@@ -71,7 +69,6 @@ const getTicket = async({datos}) => {
                 })
             }, 2000));
     } catch (error) {
-        console.log(error)
     }
 }
 

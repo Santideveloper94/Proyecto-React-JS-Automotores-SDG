@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 
 
-const Formulario = ({total, compra}) => {
+const Formulario = () => {
         // const [ error, setError ] = useState({})
 
     const { getTicket } = useFirebase()
@@ -18,8 +18,6 @@ const Formulario = ({total, compra}) => {
             email: '',
             telefono: '',
             mensaje: '',
-        // total: total,
-        // items: compra,
         });
 
         const handleChange = (event) => {
@@ -28,7 +26,6 @@ const Formulario = ({total, compra}) => {
 
         const onSubmit = (e) => {
             e.preventDefault();
-            console.log("form", formData.nombre)
             if (validarFormulario([formData.nombre, formData.apellido, formData.email, formData.telefono, formData.mensaje])) {
                 Swal.fire({
                 title: "Oops!",

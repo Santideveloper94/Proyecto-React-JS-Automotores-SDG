@@ -3,7 +3,6 @@ import { useContext } from 'react'
 import { cartContext } from '../../Contexto/ContextoCarrito'
 
 const ItemCart = ({producto}) => {
-	console.log(producto)
 	const {marca, modelo, precio, imagen, alt,id, color, offer, anio, categoria, quantity }= producto
     const {borrarElemento} = useContext(cartContext)
 	const {removerTodoElCarrito} = useContext(cartContext)
