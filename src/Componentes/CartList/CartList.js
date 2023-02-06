@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { cartContext} from '../../Contexto/ContextoCarrito'
 import ItemCart from '../ItemCart/ItemCart'
 import Formulario from '../Formulario/Formulario'
+import "./CartList.scss"
 
 const Cart = () => {
     const{cart, precioTotal} = useContext(cartContext)
