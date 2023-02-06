@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { cartContext } from '../../Contexto/ContextoCarrito'
 import useFirebase from '../../Hooks/UseFirebase'
 import Swal from 'sweetalert2'
+import "./Formulario.scss"
 
 
 
