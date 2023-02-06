@@ -17,8 +17,6 @@
 .container__cart{
     margin: 3rem 4rem;
     height: 100%;
-    background-color: lightblue;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -56,7 +54,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
     gap: 2em;
 
     .form__title{
@@ -85,6 +82,5 @@
             font-weight: 700;
             color: black;
         }
-
     }
 }

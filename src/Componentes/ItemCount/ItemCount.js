@@ -1,6 +1,5 @@
 import React, {useState,useContext} from 'react'
 import { cartContext } from '../../Contexto/ContextoCarrito'
-
 const ItemCount = ({stock,onAdd}) => {
     const [contador, setcontador] = useState(1)
     const sumar = () =>{
