@@ -1,6 +1,7 @@
 .cart__empty{
     margin: 0 auto;
     height: 100vh;
+    background-color: lightblue;
 
     display: flex;
     flex-direction: column;
@@ -15,12 +16,12 @@
 }
 
 .container__cart{
-    margin: 3rem 4rem;
-    height: 100%;
+    height: 200%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 5em;
+    background-color: lightblue;
 
     .cart__main{
         width: 100%;
@@ -35,11 +36,11 @@
             font-size: 1.5em;
             text-align: left;
             text-decoration:underline ;
+            margin:20px;
         }
 
         .cart__products{
-            margin: 0;
-
+            margin: 20px;
             height: 100%;
             display: flex;
             flex-direction: row;
@@ -62,6 +63,9 @@
         font-size: 1.5em;
         text-align: center;
         text-decoration: underline;
+    }
+    .form__cart{
+        margin: 20px;
     }
 }
 
